@@ -11,7 +11,7 @@ I desired to develope this small app to have something implemented using threads
 * Run the file server.py on the terminal or command prompt
     python3 server.py
 
-* Run the client.py in at least 2 different terminal or command prompt, to communicate with each other 
+* Run the client.py at least in 2 different terminal or command prompt, to communicate with each other 
     python3 client.py
 
 ```
