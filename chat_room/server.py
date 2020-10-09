@@ -36,11 +36,11 @@ def handle(client):   # Definning method to handle the client connection
 
 def receive():  # Definning receiving method
     while True:
-        client, address =  server.accept() # Running accept method all the time and returning client and address
-        print("Connected with {str(address)}") # Message on the server shell when new connection comes
+        client, address = server.accept() # Running accept method all the time and returning client and address
+        print(f"Connected with {str(address)}") # Message on the server shell when new connection comes
 
         client.send('NICK'.encode('ascii')) # Send the message "NICK" to the client
-        nickname = client.recv(1024).encode('ascii') # Reveves Nickname informed by the client
+        nickname = client.recv(1024).decode('ascii') # Reveves Nickname informed by the client
         nicknames.append(nickname) # Send nickname to the nicknames list
         clients.append(client) # Send client to the clients list
 
